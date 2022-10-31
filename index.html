@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SILVER-EUREKA</title>
+    <link rel="stylesheet" href="scss/style.css" />
+    <link
+      href="scss/mobile.css"
+      media="screen and (min-width: 320px) and (max-width: 1024px)"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <h1>예약 목록</h1>
+    <div id="content">
+      <div id="listDiv"></div>
+      <div id="detailDiv">
+        <div id="detailCard">
+          <p class="subTitle">예약 정보</p>
+          <table>
+            <tr>
+              <td>예약 상태</td>
+              <td id="status"></td>
+            </tr>
+            <tr>
+              <td>예약 시간</td>
+              <td id="timeReserved"></td>
+            </tr>
+            <tr>
+              <td>접수 시간</td>
+              <td id="timeRegistered"></td>
+            </tr>
+          </table>
+          <p class="subTitle">고객 정보</p>
+          <table id="customerInfo">
+            <tr>
+              <td>고객 성명</td>
+              <td
+                id="name"
+                style="
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                "
+              ></td>
+            </tr>
+            <tr>
+              <td>고객 등급</td>
+              <td id="level"></td>
+            </tr>
+            <tr>
+              <td>고객 메모</td>
+              <td
+                id="memo"
+                style="
+                  height: 50px;
+                  -webkit-box-orient: vertical;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 3;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                "
+              ></td>
+            </tr>
+            <tr>
+              <td>요청 사항</td>
+              <td
+                id="request"
+                style="
+                  height: 50px;
+                  -webkit-box-orient: vertical;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 3;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                "
+              ></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- 모바일용 팝업 -->
+    <div class="popup_layer" id="popup_layer">
+      <div class="popup_box">
+        <div id="detailCard">
+          <div>
+            <p class="subTitle">예약 정보</p>
+            <a href="javascript:closePop();">닫기</a>
+          </div>
+          <table>
+            <tr>
+              <td>예약 상태</td>
+              <td id="mob_status"></td>
+            </tr>
+            <tr>
+              <td>예약 시간</td>
+              <td id="mob_timeReserved"></td>
+            </tr>
+            <tr>
+              <td>접수 시간</td>
+              <td id="mob_timeRegistered"></td>
+            </tr>
+          </table>
+          <p class="subTitle">고객 정보</p>
+          <table id="customerInfo">
+            <tr>
+              <td>고객 성명</td>
+              <td
+                id="mob_name"
+                style="
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                "
+              ></td>
+            </tr>
+            <tr>
+              <td>고객 등급</td>
+              <td id="mob_level"></td>
+            </tr>
+            <tr>
+              <td>고객 메모</td>
+              <td
+                id="mob_memo"
+                style="
+                  height: 50px;
+                  -webkit-box-orient: vertical;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 3;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                "
+              ></td>
+            </tr>
+            <tr>
+              <td>요청 사항</td>
+              <td
+                id="mob_request"
+                style="
+                  height: 50px;
+                  -webkit-box-orient: vertical;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 3;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                "
+              ></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.10.4/polyfill.min.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8.1/dist/polyfill.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3.0/dist/fetch.umd.min.js"></script>
+    <script type="text/babel" src="js/data.js"></script>
+  </body>
+</html>
